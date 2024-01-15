@@ -1,0 +1,33 @@
+.Information {
+    width: 250px;
+    top: -6cm;
+    position: relative;
+}
+
+#photoOurholiday {
+    width: 600px;
+    height: 370px;
+    left: 7cm;
+    top: -6cm;
+    position: relative;
+}
+
+.all {
+    display: flex;
+    position: relative;
+    top: 5cm;
+}
+
+.Achat {
+    display: flex;
+    justify-content: space-between;
+    width: 255px;
+    text-align: center;
+    border: 2px solid black;
+    font-weight: bold;
+
+}
+#plus,#minus,#prix{
+position: relative;
+top: 0.5cm;
+}

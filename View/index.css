@@ -1,0 +1,79 @@
+#logo {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    top: -1cm;
+    left: -1cm;
+}
+
+#entreetexte {
+    height: 45px;
+    width: 680px;
+    /* border-radius: 5%; */
+    position: relative;
+    top: 2cm;
+    background-color: gray;
+    font-weight: bold;
+    color: white;
+    font-weight: 900;
+}
+
+::placeholder {
+    color: white;
+    font-size: 1.5em;
+}
+
+#btntete {
+    width: max-content;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    border-radius: 10px;
+}
+
+.entete {
+    display: flex;
+    justify-content: space-between;
+}
+
+#loupe {
+    position: absolute;
+    left: 70%;
+    top: 2.5cm;
+    font-size: 33px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*\*/
+#ourholiday {
+    width: 500px;
+    height: 500px;
+    left: 2cm;
+    position: relative;
+}
+
+#phrase {
+    position: relative;
+    left: 3cm;
+    font-size: 0.6cm;
+    margin-top: 15%;
+    width: 400px;
+}
+
+.corps {
+    display: flex;
+}
+#lien{
+    border: 2px solid black;
+    border-radius:20px;
+    width: 200px;
+    height: fit-content;
+    font-weight: bold;
+    color: black;
+    font-size: 33px;
+    text-align: center;
+    position: relative;
+    margin-top: 30%;
+    left: -5cm;
+}
