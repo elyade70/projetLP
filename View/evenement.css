@@ -1,0 +1,48 @@
+.categories {
+    border: 2px solid red;
+    width: 23%;
+    height: 50%;
+    display: block;
+    justify-content: space-around;
+
+}
+
+
+
+.animations {
+    border: 2px solid blue;
+    width: 80%;
+    height: 50%;
+}
+
+.page {
+    display: flex;
+}
+
+#categories1,
+#categories2,
+#categories3,
+#categories4,
+#categories5,
+#categories6,
+#categories7,
+#categories8,
+#categories9 {
+
+
+    font-weight: bold;
+    font-size: 3.2rem;
+    color: gray;
+}
+#categories1:hover,
+#categories2:hover,
+#categories3:hover,
+#categories4:hover,
+#categories5:hover,
+#categories6:hover,
+#categories7:hover,
+#categories8:hover,
+#categories9:hover  {
+    color: blue;
+
+}
