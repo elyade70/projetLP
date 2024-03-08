@@ -23,26 +23,22 @@
     font-size: 1.5em;
 }
 
-#btntete {
-    width: max-content;
-    height: 40px;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    text-decoration: underline;
-    border-radius: 10px;
+.dropdown {
+position: relative;
+top: 2cm;
+width: 300px ;
 }
 
 .entete {
-    display: flex;
-    justify-content: space-between;
+    display: flex !important;
+    justify-content: space-between !important;
 }
 
 #loupe {
-    position: absolute;
-    left: 70%;
-    top: 2.5cm;
-    font-size: 33px;
+    position: absolute !important;
+    left: 70% !important;
+    top: 2.5cm !important;
+    font-size: 33px !important;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------*\*/
@@ -67,7 +63,7 @@
 #lien{
     border: 2px solid black;
     border-radius:20px;
-    width: 200px;
+    width: auto;
     height: fit-content;
     font-weight: bold;
     color: black;

@@ -4,12 +4,35 @@
     position: relative;
 }
 
-#photoOurholiday {
+#detail {
     width: 600px;
-    height: 370px;
+    height: auto;
     left: 7cm;
     top: -6cm;
     position: relative;
+    font-weight: bold;
+    font-size: xx-large;
+    border: 4px solid black;
+    animation: colorRotate 5s linear infinite;
+   background-color: cornsilk;
+}
+
+@keyframes colorRotate {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: blue;
+    }
+    50% {
+        border-color: green;
+    }
+    75% {
+        border-color: yellow;
+    }
+    100% {
+        border-color: red;
+    }
 }
 
 .all {
@@ -17,17 +40,30 @@
     position: relative;
     top: 5cm;
 }
-
+.Prix{
+    
+}
 .Achat {
     display: flex;
     justify-content: space-between;
-    width: 255px;
+    width: 295px;
     text-align: center;
     border: 2px solid black;
     font-weight: bold;
+    position: absolute;
+    top: 14cm;
+
 
 }
 #plus,#minus,#prix{
 position: relative;
 top: 0.5cm;
+}
+#achete{
+    background-color: black;
+    color:white;
+font-size: x-large;
+}
+select{
+    width: 10px;
 }
