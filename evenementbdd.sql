@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 05 fév. 2024 à 09:12
--- Version du serveur : 10.4.32-MariaDB
--- Version de PHP : 8.2.12
+-- Généré le : mar. 25 fév. 2025 à 22:44
+-- Version du serveur : 10.4.25-MariaDB
+-- Version de PHP : 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,7 @@ CREATE TABLE `achete` (
   `date_achat` date NOT NULL,
   `fk_utilisateur` int(255) NOT NULL,
   `fk_evenement` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -45,7 +45,7 @@ CREATE TABLE `achete` (
 CREATE TABLE `categories` (
   `id_categories` int(255) NOT NULL,
   `libelle` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `categories`
@@ -76,7 +76,7 @@ CREATE TABLE `evenement` (
   `prix` int(255) NOT NULL,
   `nombrePlaceMaximum` int(255) NOT NULL,
   `fk_categories` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `evenement`
@@ -103,8 +103,16 @@ CREATE TABLE `utilisateur` (
   `prenom` varchar(255) NOT NULL,
   `date_naissance` date NOT NULL,
   `motDePasse` varchar(255) NOT NULL,
-  `telephone` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `telephone` int(255) NOT NULL,
+  `admin` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`id_utilisateur`, `email`, `nom`, `prenom`, `date_naissance`, `motDePasse`, `telephone`, `admin`) VALUES
+(0, 'ekip@gmail.com', 'el', 'yade', '2003-01-07', 'ekip', 98765456, 0);
 
 --
 -- Index pour les tables déchargées
