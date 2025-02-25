@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (empty($_SESSION['id_ut'])) {
+if ($_SESSION['id_ut'] !=null) {
     header("Location:../controller/connexion.php");
 } else {
     $id_ut = $_SESSION['id_ut'];

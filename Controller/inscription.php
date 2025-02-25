@@ -12,12 +12,7 @@ if (isset($_POST['nom']) && isset($_POST['prenom'])  && isset($_POST['pwd'])  &&
     $email = $_POST['email'];
     $date_naissance = $_POST['date_naissance'];
     $telephone = $_POST['telephone'];
-    echo $email;
-    echo " ".  $pwd;
-    echo " ". $nom;
-    echo " ". $prenom;
-    echo " ". $date_naissance;
-    echo " ". $telephone;
+    $pwd = password_hash($pwd, PASSWORD_DEFAULT);
     $user = $bdd->newuser($email, $pwd, $nom, $prenom, $date_naissance, $telephone);
     require "../View/valide.php";
 

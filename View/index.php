@@ -19,7 +19,7 @@ include "../View/header.php"
         le soleil éclatant et les souvenirs chaleureux !  &#127774;</strong>
         <br>
         <br>
-        <a href="../Controller/categories.php" id="lien"> <i class="bi bi-link-45deg"></i>Voir les catégories</a>
+        <a href="../Controller/billeterie.php" id="lien"> <i class="bi bi-link-45deg"></i>Billeterie</a>
         </div>
        
 </body>

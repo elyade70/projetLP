@@ -14,9 +14,13 @@ require "../View/header.php";
 
 </head>
 <body>
-    <div class="container">
-    <h1>Récapitualif</h1>
     <?php
+    if($achatvalid){
+
+   
+   echo' <div class="container">';
+   echo' <h1>Récapitualif</h1>';
+  
 if (is_array($evenement) || is_object($evenement)) {
     foreach ($evenement as $eve) {
 echo "<div><strong>Evenement: </strong> ".$eve['libelle']." </div>";
@@ -25,10 +29,22 @@ echo "<div><strong>Date: </strong>  " . date('d F Y', strtotime($eve['date'])) .
 echo "<div><strong>Quantité: </strong> ".$qte." </div>";
 echo "<div><strong>Prix: </strong> ".$prix." </div>";
     }}
-    ?>
-    <div class="alert alert-success" role="alert">
-  Validé 
-</div>
-    </div>
+  
+   echo' <div class="alert alert-success" role="alert">';
+  echo'Validé' ;
+echo '</div>';
+    echo'</div>';
+}
+else{
+    echo' <div class="containerRed">';
+    echo' <h1>Erreur</h1>';
+
+   
+    echo' <div class="alert alert-danger" role="alert">';
+   echo'Places terminées!' ;
+ echo '</div>';
+     echo'</div>';
+ }
+?>
 </body>
 </html>

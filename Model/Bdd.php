@@ -105,7 +105,7 @@ class Bdd
 
     function connexion($mail, $pwd)
     {
-        $sql = "SELECT `id_utilisateur`, `email`, `nom`, `prenom`, `date_naissance`, `motDePasse`, `telephone`, `admin` 
+        $sql = "SELECT `id_utilisateur`, `email`, `nom`, `prenom`,  `motDePasse`
         FROM `utilisateur`
          WHERE email='$mail' AND motDePasse='$pwd';";
         $query = $this->bdd->prepare($sql);

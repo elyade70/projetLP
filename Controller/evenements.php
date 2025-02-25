@@ -1,23 +1,17 @@
 <?php
-session_start();
-if ($_SESSION['id_ut'] !=null) {
-    header("Location:../controller/connexion.php");
-} else {
-    $id_ut = $_SESSION['id_ut'];
-}
+
 
 
 require_once "../Model/BDD.php";
 $bdd = new Bdd();
 
 $categories = $bdd->getCategories();
-$user = $bdd->getUser($id_ut);
 
 //$oneCategorie = $bdd->getOneCategorie();
 
-require "../View/categories.php";
+require "../View/allevenement.php";
 
-if (isset($_GET['idcategorie'])) {
+if (isset($_POST['idcategorie'])) {
     $idcategorie = $_POST['idcategorie'];
     $oneCategorie =$bdd->getOneCategorieByID($idcategorie);
 }

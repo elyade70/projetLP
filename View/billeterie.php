@@ -71,7 +71,8 @@ require "../View/header.php";
                         foreach ($nbPlaceRestante as $nbplres) {
                             if (is_array($nbPlaceAchetes) || is_object($nbPlaceAchetes)) {
                                 foreach ($nbPlaceAchetes as $nbach) {
-                                    if ((($eve['nombrePlaceMaximum'] - $nbplres['nbPlacerestante'])) > 0) {
+
+                                    if ($nbach['nbPlaceAchete'] != $eve['nombrePlaceMaximum']) {
 
 
 
@@ -82,7 +83,7 @@ require "../View/header.php";
 
                                         echo '  <div class="Prix">';
 
-                                        echo '   <!-- <i class="bi bi-patch-minus-fill" id="minus" onclick="minus();"></i> -->';
+                                        echo '   <!-- <i class="bi bi-patch-min+-fill" id="minus" onclick="minus();"></i> -->';
                                         echo '    <label for="qte">Quantité:</label>';
                                         echo '   <select name="qte" id="qte" style="width:90px" onchange="setPrix(this.value);">';
 
@@ -99,7 +100,7 @@ require "../View/header.php";
 
                                         echo '   </div>';
 
-                                        echo ' <input type="button" value="Acheter" id="achete" onclick="acheter();"> ';
+                                        echo ' <input type="button" value="Acheter" id="achete" onclick="acheter();" > ';
                                     } else {
 
                                         echo '<div class="alert alert-dark" role="alert" style="width: 350px !important;">

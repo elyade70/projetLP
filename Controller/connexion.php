@@ -1,30 +1,39 @@
 <?php
 
-
+ session_start();
 
 require_once "../Model/BDD.php";
 $bdd = new Bdd();
 
 
 
-require "../View/connexion.php";
 
 
 if (isset($_POST['email']) && isset($_POST['pwd'])) {
     $email = $_POST['email'];
     $pwd = $_POST['pwd'];
     $con = $bdd->connexion($email, $pwd);
-    if ($con == true) {
-        session_start();
+var_dump($con);
+
+if ($_SESSION['id_ut'] =!null) {
+    echo 0;
+
+}
+if (!empty($con)) {
+    echo 11;
+
+    //
         foreach ($con as $user) {
-            $_SESSION = [
-                'id_ut' => $user['id_utilisateur'],
-                'nom' => $user['nom'],
-                'prenom' => $user['prenom']
-            ];
+            $_SESSION['id_ut'] = $user['id_utilisateur'];
+            $_SESSION['nom'] = $user['nom'];
+            $_SESSION['prenom'] = $user['prenom'];
+            if ($_SESSION['id_ut'] !=null) {
+
+            //echo  $_SESSION['id_ut'] ;
+            }
         }
 
-        header("Location:../Controller/accueil.php");
+      header("Location:../Controller/accueil.php");
     } else {
         echo '<script>alert("Les identifiants saisis sont incorrects")</script>';
 
@@ -32,3 +41,4 @@ if (isset($_POST['email']) && isset($_POST['pwd'])) {
         
     }
 }
+require "../View/connexion.php";

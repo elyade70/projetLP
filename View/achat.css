@@ -5,3 +5,10 @@
     padding: 10px;
     font-size: x-large;
 }
+.containerRed{
+    margin: auto;
+    width: 60%;
+    border: 3px solid rgb(43, 42, 42);
+    padding: 10px;
+    font-size: x-large;
+}
